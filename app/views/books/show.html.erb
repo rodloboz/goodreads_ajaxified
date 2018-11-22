@@ -1,0 +1,39 @@
+<div class="page-wrapper">
+  <div class="book-section">
+    <div class="book-container">
+      <div class="book-cover" style="background: url(<%= @book.image_url %>) center / cover no-repeat;">
+      </div>
+      <div>
+        <div class="book-title">
+          <h1><%= @book.title %></h1>
+        </div>
+        <div class="book-author">
+          by <span><%= @book.author.full_name %></span>
+        </div>
+        <div class="book-rating">
+          <% if @book.average_rating.nil? %>
+            <span class="no-rating">not rated</span>
+          <% else %>
+            <%= set_stars(@book.average_rating) %>
+          <% end %>
+          |
+          <span class="review-count">
+            <%= pluralize(@book.reviews.count, 'review') %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-section">
+    <h5>Comunity reviews</h5>
+    <div id="reviews">
+      <% if @book.reviews.any? %>
+          <%= render @book.reviews %>
+      <% else %>
+        <p>This book doesn't have any reviews yet.</p>
+      <% end %>
+    </div>
+
+  </div>
+</div>

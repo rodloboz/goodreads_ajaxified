@@ -1,0 +1,26 @@
+<div class="col-xs-12 col-sm-6">
+  <%= link_to book do %>
+    <div class="book">
+      <div class="book-cover" style="background: url(<%= book.image_url %>) center / cover no-repeat;"></div>
+      <div class="book-details">
+        <div class="book-title">
+          <%= book.title %>
+        </div>
+        <div class="book-author">
+          by <span><%= book.author.full_name %></span>
+        </div>
+        <div class="book-rating">
+          <% if book.average_rating.nil? %>
+            <span class="no-rating">not rated</span>
+          <% else %>
+            <%= set_stars(book.average_rating) %>
+          <% end %>
+          |
+          <span class="review-count">
+            <%= pluralize(book.reviews.count, 'review') %>
+          </span>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

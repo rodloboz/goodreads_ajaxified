@@ -1,0 +1,55 @@
+#books {
+  margin-bottom: 30px;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.book {
+  margin-top: 30px;
+  width: 500px;
+  height: 230px;
+  background: white;
+  box-shadow:  0 1px 7px rgba(0,0,0,.05);
+  display: flex;
+}
+
+.book-cover {
+  width: 150px;
+  height: 100%;
+}
+
+.book-details {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.book-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.book-author {
+  font-size: 16px;
+  font-weight: light;
+}
+
+.book-rating {
+  margin-top: 10px;
+  color: $brand-primary;
+}
+
+.no-rating {
+  font-size: 12px;
+  font-weight: lightest;
+  font-style: italic;
+  color: black;
+}
+
+.review-count {
+  font-size: 12px;
+  font-weight: lightest;
+  color: black;
+}

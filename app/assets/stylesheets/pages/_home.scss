@@ -1,1 +1,30 @@
-// Specific CSS for your home-page
+.page-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+// Paddings
+.padded {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.padded-top {
+  padding-top: 20px;
+ }
+
+.padded-bottom {
+  padding-bottom: 20px;
+}
+
+.padded-right {
+  padding-right: 10px;
+}
+
+.padded-left {
+  padding-left: 20px;
+}
+
+.padded-all-sides {
+  padding: 20px;
+}
