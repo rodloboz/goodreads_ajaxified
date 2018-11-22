@@ -26,10 +26,13 @@
   </div>
 
   <div class="book-section">
+    <% if user_signed_in? && !current_user.has_reviewed_book?(@book) %>
+      <%= render 'reviews/form' %>
+    <% end %>
     <h5>Comunity reviews</h5>
     <div id="reviews">
       <% if @book.reviews.any? %>
-          <%= render @book.reviews %>
+          <%= render @book.reviews.ordered_by_date %>
       <% else %>
         <p>This book doesn't have any reviews yet.</p>
       <% end %>

@@ -3,11 +3,11 @@
     <div class="avatar-container">
       <div class="avatar-card">
         <div class="padded-right">
-            <%= image_tag(review.user.avatar_url, class: "avatar-large") %>
+            <%= image_tag(user_avatar(review.user), class: "avatar-large") %>
         </div>
         <div class="user-and-date">
           <p class="user-name">
-            <%= review.user.first_name %>
+            <%#= review.user.first_name %>
           </p>
           <p class="date-info"><%= review.created_at.strftime("%d %b, %Y") %></p>
         </div>

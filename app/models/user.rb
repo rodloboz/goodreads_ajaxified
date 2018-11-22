@@ -9,4 +9,8 @@ class User < ApplicationRecord
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def has_reviewed_book?(book)
+    reviews.where(book: book).any?
+  end
 end

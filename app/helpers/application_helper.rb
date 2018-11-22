@@ -10,4 +10,12 @@ module ApplicationHelper
     end
     return result.html_safe
   end
+
+  def user_avatar(user)
+    if user.avatar_url.nil?
+      image_path 'geek.jpg'
+    else
+      user.avatar_url
+    end
+  end
 end
